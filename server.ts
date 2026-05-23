@@ -69,7 +69,7 @@ const chatSchema = new mongoose.Schema({
   messages: [messageSchema]
 });
 
-const Chat = mongoose.model('Chat', chatSchema);
+const Chat = mongoose.models.Chat || mongoose.model('Chat', chatSchema);
 
 // --- REST API OVER THE DATABASE ---
 
