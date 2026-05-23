@@ -1,12 +1,13 @@
 import express from "express";
 import path from "path";
-import fs from "fs";
 import { GoogleGenAI } from "@google/genai";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 
-// Load environment variables
-dotenv.config();
+// Load environment variables (only locally — Vercel injects env vars automatically)
+if (!process.env.VERCEL) {
+  dotenv.config();
+}
 
 const app = express();
 const PORT = 3000;
@@ -24,30 +25,36 @@ const ai = new GoogleGenAI({
   }
 });
 
-let isConnected = false;
+// Cached connection promise for serverless environments (Vercel cold starts)
+let cachedConnection: typeof mongoose | null = null;
 
 async function connectToDatabase() {
-  if (isConnected) return;
-  const mongoUri = process.env.MONGODB_URI;
-  if (!mongoUri) {
-    console.error("MONGODB_URI not found in environment.");
+  // If already connected, return immediately
+  if (cachedConnection && mongoose.connection.readyState === 1) {
     return;
   }
+  const mongoUri = process.env.MONGODB_URI;
+  if (!mongoUri) {
+    throw new Error("MONGODB_URI not found in environment variables.");
+  }
   try {
-    await mongoose.connect(mongoUri);
-    isConnected = true;
+    cachedConnection = await mongoose.connect(mongoUri);
     console.log('Connected to MongoDB Atlas');
   } catch (err) {
     console.error('Error connecting to MongoDB:', err);
+    throw err;
   }
 }
 
 // Middleware to ensure DB connection is active before any API route
 app.use(async (req, res, next) => {
-  if (req.path.startsWith('/api')) {
+  try {
     await connectToDatabase();
+    next();
+  } catch (err: any) {
+    console.error('DB connection middleware failed:', err);
+    res.status(500).json({ error: 'Database connection failed', details: err?.message });
   }
-  next();
 });
 
 // Define Schemas
@@ -139,12 +146,14 @@ app.post("/api/chats", async (req, res) => {
 app.get("/api/debug-env", (req, res) => {
   res.json({
     mongoUriLength: process.env.MONGODB_URI?.length || 0,
-    mongoUriStart: process.env.MONGODB_URI?.substring(0, 5),
-    mongoUriEnd: process.env.MONGODB_URI?.substring(process.env.MONGODB_URI.length - 5),
+    mongoUriStart: process.env.MONGODB_URI?.substring(0, 15),
+    mongoUriEnd: process.env.MONGODB_URI?.substring(process.env.MONGODB_URI!.length - 5),
     hasQuotes: process.env.MONGODB_URI?.startsWith('"') || process.env.MONGODB_URI?.startsWith("'"),
     geminiKeyLength: process.env.GEMINI_API_KEY?.length || 0,
-    isConnected,
-    mongooseState: mongoose.connection.readyState
+    isConnected: !!cachedConnection,
+    mongooseState: mongoose.connection.readyState,
+    vercelEnv: process.env.VERCEL || "not set",
+    nodeEnv: process.env.NODE_ENV || "not set"
   });
 });
 
