@@ -25,15 +25,31 @@ const ai = new GoogleGenAI({
   }
 });
 
-// Setup MongoDB connection
-const mongoUri = process.env.MONGODB_URI;
-if (mongoUri) {
-  mongoose.connect(mongoUri)
-    .then(() => console.log('Connected to MongoDB Atlas'))
-    .catch(err => console.error('Error connecting to MongoDB:', err));
-} else {
-  console.error("MONGODB_URI not found in environment.");
+let isConnected = false;
+
+async function connectToDatabase() {
+  if (isConnected) return;
+  const mongoUri = process.env.MONGODB_URI;
+  if (!mongoUri) {
+    console.error("MONGODB_URI not found in environment.");
+    return;
+  }
+  try {
+    await mongoose.connect(mongoUri);
+    isConnected = true;
+    console.log('Connected to MongoDB Atlas');
+  } catch (err) {
+    console.error('Error connecting to MongoDB:', err);
+  }
 }
+
+// Middleware to ensure DB connection is active before any API route
+app.use(async (req, res, next) => {
+  if (req.path.startsWith('/api')) {
+    await connectToDatabase();
+  }
+  next();
+});
 
 // Define Schemas
 const messageSchema = new mongoose.Schema({
