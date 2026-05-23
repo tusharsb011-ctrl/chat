@@ -131,10 +131,22 @@ app.post("/api/chats", async (req, res) => {
   try {
     await newChat.save();
     res.status(201).json(newChat);
-  } catch (error) {
+  } catch (error: any) {
     console.error("Failed to create chat:", error);
-    res.status(500).json({ error: "Failed to create chat" });
+    res.status(500).json({ error: "Failed to create chat", details: error?.message || String(error) });
   }
+});
+
+app.get("/api/debug-env", (req, res) => {
+  res.json({
+    mongoUriLength: process.env.MONGODB_URI?.length || 0,
+    mongoUriStart: process.env.MONGODB_URI?.substring(0, 5),
+    mongoUriEnd: process.env.MONGODB_URI?.substring(process.env.MONGODB_URI.length - 5),
+    hasQuotes: process.env.MONGODB_URI?.startsWith('"') || process.env.MONGODB_URI?.startsWith("'"),
+    geminiKeyLength: process.env.GEMINI_API_KEY?.length || 0,
+    isConnected,
+    mongooseState: mongoose.connection.readyState
+  });
 });
 
 // Generate AI response for a chat

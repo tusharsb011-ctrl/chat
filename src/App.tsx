@@ -206,7 +206,8 @@ export default function App() {
             setApiError("Error generating AI response.");
           }
         } else {
-          setApiError("Unable to initialize new chat metadata.");
+          const errData = await res.json().catch(() => ({}));
+          setApiError(`Unable to initialize new chat metadata. Server says: ${errData.details || errData.error || res.status}`);
         }
       } else {
         // --- 2. APPEND MESSAGE TO AN EXISTING CHAT ---
