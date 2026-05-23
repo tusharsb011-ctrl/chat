@@ -1,0 +1,466 @@
+[
+  {
+    "id": "chat-1779467101914",
+    "title": "Draw A Circle",
+    "createdAt": "2026-05-22T16:25:01.914Z",
+    "updatedAt": "2026-05-22T16:25:23.017Z",
+    "messages": [
+      {
+        "id": "msg-1779467101914-user",
+        "role": "user",
+        "content": "draw a circle",
+        "createdAt": "2026-05-22T16:25:01.914Z"
+      },
+      {
+        "id": "msg-1779467107978-ai",
+        "role": "assistant",
+        "content": "{\n  \"explain\": \"As a text-based AI, I can't physically \\\"draw\\\" a circle. However, I can provide you with code that will render a circle in a web browser using HTML and CSS. This is a common and straightforward way to display shapes.\\n\\nThe HTML creates a simple `div` element, and the CSS styles this `div` to appear as a circle. Key CSS properties used are:\\n\\n*   `width` and `height`: To define the dimensions of the square container.\\n*   `background-color`: To give the circle a visible color.\\n*   `border-radius: 50%`: This is the crucial property that transforms a square into a perfect circle by rounding its corners completely. If you use a value less than 50%, it will create a rounded rectangle.\\n\\nYou can copy and paste this code into an `.html` file and open it in any web browser to see the circle.\",\n  \"code\": \"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n    <meta charset=\\\"UTF-8\\\">\\n    <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n    <title>A Simple Circle</title>\\n    <style>\\n        body {\\n            display: flex;\\n            justify-content: center;\\n            align-items: center;\\n            min-height: 100vh;\\n            margin: 0;\\n            background-color: #f0f0f0;\\n            font-family: sans-serif;\\n        }\\n\\n        .circle {\\n            width: 150px; /* Adjust size as needed */\\n            height: 150px; /* Must be equal to width for a perfect circle */\\n            background-color: #3498db; /* A nice blue color */\\n            border-radius: 50%; /* This makes it a circle */\\n            display: flex;\\n            justify-content: center;\\n            align-items: center;\\n            color: white;\\n            font-size: 1.2em;\\n            font-weight: bold;\\n            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add a subtle shadow */\\n        }\\n    </style>\\n</head>\\n<body>\\n    <div class=\\\"circle\\\">\\n        Circle\\n    </div>\\n</body>\\n</html>\"\n}",
+        "videoUrl": "http://localhost:8000/download/ec51c2cd-d937-4949-b994-e6822989d27d",
+        "createdAt": "2026-05-22T16:25:07.978Z"
+      }
+    ]
+  },
+  {
+    "id": "chat-1779466975259",
+    "title": "Draw A Circle Request",
+    "createdAt": "2026-05-22T16:22:55.259Z",
+    "updatedAt": "2026-05-22T16:23:01.683Z",
+    "messages": [
+      {
+        "id": "msg-1779466975259-user",
+        "role": "user",
+        "content": "draw a circle",
+        "createdAt": "2026-05-22T16:22:55.259Z"
+      },
+      {
+        "id": "msg-1779466981682-ai",
+        "role": "assistant",
+        "content": "{\n  \"explain\": \"As an AI, I cannot visually draw a circle directly. However, I can provide you with code that can draw a circle using a programming language. Below is a Python example using the built-in `turtle` graphics module, which is a great way to learn basic graphics programming.\\n\\nThis Python script will open a new window and draw a circle with a radius of 100 pixels. You will need a Python environment installed on your computer to run this code.\",\n  \"code\": \"import turtle\\n\\n# Get a screen to draw on\\nscreen = turtle.Screen()\\nscreen.setup(width=600, height=600)\\nscreen.title(\\\"Draw a Circle\\\")\\n\\n# Create a turtle named 'pen'\\npen = turtle.Turtle()\\n\\n# Set drawing speed (1=slowest, 10=fastest, 0=no animation)\\npen.speed(5)\\n\\n# Draw a circle with a radius of 100 pixels\\npen.circle(100)\\n\\n# Keep the window open until it's manually closed\\nturtle.done()\"\n}",
+        "videoUrl": "https://www.w3schools.com/html/mov_bbb.mp4",
+        "createdAt": "2026-05-22T16:23:01.682Z"
+      }
+    ]
+  },
+  {
+    "id": "chat-1779466555551",
+    "title": "draw a circle",
+    "createdAt": "2026-05-22T16:15:55.551Z",
+    "updatedAt": "2026-05-22T16:16:01.060Z",
+    "messages": [
+      {
+        "id": "msg-1779466555551-user",
+        "role": "user",
+        "content": "draw a circle",
+        "createdAt": "2026-05-22T16:15:55.551Z"
+      },
+      {
+        "id": "msg-1779466561058-ai",
+        "role": "assistant",
+        "content": "{\n  \"explain\": \"As an AI, I cannot directly \\\"draw\\\" a visual circle that you can see. However, I can provide you with code that will draw a circle when executed in an appropriate environment. Below is a Python code snippet using the `turtle` graphics module, which is a great way to introduce drawing with code.\\n\\nTo see the circle, you would need to:\\n1.  Have Python installed on your computer.\\n2.  Save the code below as a `.py` file (e.g., `draw_circle.py`).\\n3.  Run it from your terminal using `python draw_circle.py`.\\n\\nThis code will open a new window and draw a blue circle with a radius of 100 pixels.\",\n  \"code\": \"import turtle\\n\\n# Get a screen to draw on\\nwn = turtle.Screen()\\nwn.bgcolor(\\\"lightgreen\\\") # Set the background color\\n\\n# Create a turtle object\\nt = turtle.Turtle()\\nt.speed(1) # Set the drawing speed (1 is slowest, 10 is fastest, 0 is instant)\\nt.color(\\\"blue\\\") # Set the turtle's color (and the line color)\\nt.pensize(3) # Set the pen thickness\\n\\n# Draw a circle with a radius of 100\\nt.circle(100)\\n\\n# Keep the window open until it's closed manually\\nwn.mainloop()\"\n}",
+        "videoUrl": "https://www.w3schools.com/html/mov_bbb.mp4",
+        "createdAt": "2026-05-22T16:16:01.058Z"
+      }
+    ]
+  },
+  {
+    "id": "chat-1779466210923",
+    "title": "draw a circle",
+    "createdAt": "2026-05-22T16:10:10.923Z",
+    "updatedAt": "2026-05-22T16:10:11.749Z",
+    "messages": [
+      {
+        "id": "msg-1779466210923-user",
+        "role": "user",
+        "content": "draw a circle",
+        "createdAt": "2026-05-22T16:10:10.923Z"
+      },
+      {
+        "id": "msg-1779466211749-ai",
+        "role": "assistant",
+        "content": "⚠️ Failed to get AI response: {\"error\":{\"code\":429,\"message\":\"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.5-flash\\nPlease retry in 40.534026036s.\",\"status\":\"RESOURCE_EXHAUSTED\",\"details\":[{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-3.5-flash\"},\"quotaValue\":\"20\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"40s\"}]}} Make sure to setup your GEMINI_API_KEY inside Settings > Secrets.",
+        "createdAt": "2026-05-22T16:10:11.749Z"
+      }
+    ]
+  },
+  {
+    "id": "chat-1779465967717",
+    "title": "Circle Drawing Request",
+    "createdAt": "2026-05-22T16:06:07.717Z",
+    "updatedAt": "2026-05-22T16:06:12.928Z",
+    "messages": [
+      {
+        "id": "msg-1779465967717-user",
+        "role": "user",
+        "content": "hi draw a circle",
+        "createdAt": "2026-05-22T16:06:07.717Z"
+      },
+      {
+        "id": "msg-1779465972926-ai",
+        "role": "assistant",
+        "content": "{\n  \"explain\": \"Here is an SVG code to draw a simple red circle with a black border. You can save this as an `.svg` file or embed it directly into an HTML page.\",\n  \"code\": \"<svg width=\\\"100\\\" height=\\\"100\\\" viewBox=\\\"0 0 100 100\\\" xmlns=\\\"http://www.w3.org/2000/svg\\\">\\n  <circle cx=\\\"50\\\" cy=\\\"50\\\" r=\\\"40\\\" stroke=\\\"black\\\" stroke-width=\\\"3\\\" fill=\\\"red\\\" />\\n</svg>\"\n}",
+        "videoUrl": "https://www.w3schools.com/html/mov_bbb.mp4",
+        "createdAt": "2026-05-22T16:06:12.926Z"
+      }
+    ]
+  },
+  {
+    "id": "chat-1779462148200",
+    "title": "Starting a New Conversation",
+    "createdAt": "2026-05-22T15:02:28.200Z",
+    "updatedAt": "2026-05-22T15:02:39.319Z",
+    "messages": [
+      {
+        "id": "msg-1779462148200-user",
+        "role": "user",
+        "content": "hi",
+        "createdAt": "2026-05-22T15:02:28.200Z"
+      },
+      {
+        "id": "msg-1779462152582-ai",
+        "role": "assistant",
+        "content": "{\n  \"explain\": \"Hello! How can I help you today?\",\n  \"code\": \"\"\n}",
+        "createdAt": "2026-05-22T15:02:32.582Z"
+      },
+      {
+        "id": "msg-1779462156735-user",
+        "role": "user",
+        "content": "make code",
+        "createdAt": "2026-05-22T15:02:36.735Z"
+      },
+      {
+        "id": "msg-1779462159318-ai",
+        "role": "assistant",
+        "content": "{\n  \"explain\": \"Since you didn't specify what kind of code you need, I've created a simple Python 'Hello, World!' example. Please let me know what specific programming language or task you would like me to write code for!\",\n  \"code\": \"print(\\\"Hello, World!\\\")\"\n}",
+        "createdAt": "2026-05-22T15:02:39.318Z"
+      }
+    ]
+  },
+  {
+    "id": "chat-1779462011073",
+    "title": "Starting a New Chat",
+    "createdAt": "2026-05-22T15:00:11.073Z",
+    "updatedAt": "2026-05-22T15:00:16.035Z",
+    "messages": [
+      {
+        "id": "msg-1779462011073-user",
+        "role": "user",
+        "content": "hi",
+        "createdAt": "2026-05-22T15:00:11.073Z"
+      },
+      {
+        "id": "msg-1779462016034-ai",
+        "role": "assistant",
+        "content": "Hello! 👋 How can I help you today? \n\nWhether you need help with writing, coding, brainstorming, or analyzing data, I'm here to assist. Just let me know what's on your mind!",
+        "createdAt": "2026-05-22T15:00:16.034Z"
+      }
+    ]
+  },
+  {
+    "id": "chat-1779461672089",
+    "title": "Starting A New Conversation",
+    "createdAt": "2026-05-22T14:54:32.089Z",
+    "updatedAt": "2026-05-22T14:54:41.745Z",
+    "messages": [
+      {
+        "id": "msg-1779461672089-user",
+        "role": "user",
+        "content": "hi",
+        "createdAt": "2026-05-22T14:54:32.089Z"
+      },
+      {
+        "id": "msg-1779461676863-ai",
+        "role": "assistant",
+        "content": "Hello! 👋 \n\nHow can I help you today? Feel free to ask a question, start a brainstorm, or get help with a project!",
+        "createdAt": "2026-05-22T14:54:36.863Z"
+      },
+      {
+        "id": "msg-1779461680209-user",
+        "role": "user",
+        "content": "hi",
+        "createdAt": "2026-05-22T14:54:40.209Z"
+      },
+      {
+        "id": "msg-1779461681744-ai",
+        "role": "assistant",
+        "content": "Hello again! 😊 \n\nHow can I help you today? Feel free to let me know what you're working on or what questions you have!",
+        "createdAt": "2026-05-22T14:54:41.744Z"
+      }
+    ]
+  },
+  {
+    "id": "chat-1779461338976",
+    "title": "Starting a New Chat",
+    "createdAt": "2026-05-22T14:48:58.976Z",
+    "updatedAt": "2026-05-22T14:49:03.389Z",
+    "messages": [
+      {
+        "id": "msg-1779461338976-user",
+        "role": "user",
+        "content": "hi",
+        "createdAt": "2026-05-22T14:48:58.976Z"
+      },
+      {
+        "id": "msg-1779461343388-ai",
+        "role": "assistant",
+        "content": "Hello! How can I help you today? \n\nFeel free to ask a question, bring up a topic you'd like to discuss, or let me know if there is a specific task I can help you with.",
+        "createdAt": "2026-05-22T14:49:03.388Z"
+      }
+    ]
+  },
+  {
+    "id": "chat-1779461334996",
+    "title": "Starting a New Conversation",
+    "createdAt": "2026-05-22T14:48:54.996Z",
+    "updatedAt": "2026-05-22T14:48:59.163Z",
+    "messages": [
+      {
+        "id": "msg-1779461334996-user",
+        "role": "user",
+        "content": "hi",
+        "createdAt": "2026-05-22T14:48:54.996Z"
+      },
+      {
+        "id": "msg-1779461339161-ai",
+        "role": "assistant",
+        "content": "Hello! How can I help you today? \n\nFeel free to ask a question, share a project you're working on, or let me know how I can assist you!",
+        "createdAt": "2026-05-22T14:48:59.161Z"
+      }
+    ]
+  },
+  {
+    "id": "chat-1779439311367",
+    "title": "Introduction from Tushar",
+    "createdAt": "2026-05-22T08:41:51.367Z",
+    "updatedAt": "2026-05-22T14:49:26.299Z",
+    "messages": [
+      {
+        "id": "msg-1779439311367-user",
+        "role": "user",
+        "content": "im tushar",
+        "createdAt": "2026-05-22T08:41:51.367Z"
+      },
+      {
+        "id": "msg-1779439316619-ai",
+        "role": "assistant",
+        "content": "Hello Tushar! It's a pleasure to meet you. 😊 \n\nHow can I help you today? Feel free to ask me anything—whether you need help with:\n\n*   **Writing & Editing** (emails, essays, resumes)\n*   **Coding & Tech** (debugging, learning new concepts)\n*   **Brainstorming** (ideas, planning, organizing)\n*   **Learning** (explaining complex topics simply)\n\nWhat's on your mind?",
+        "createdAt": "2026-05-22T08:41:56.620Z"
+      },
+      {
+        "id": "msg-1779461353286-user",
+        "role": "user",
+        "content": "hi",
+        "createdAt": "2026-05-22T14:49:13.286Z"
+      },
+      {
+        "id": "msg-1779461355024-ai",
+        "role": "assistant",
+        "content": "Hi Tushar! How are you doing today? \n\nLet me know how I can help you!",
+        "createdAt": "2026-05-22T14:49:15.024Z"
+      },
+      {
+        "id": "msg-1779461364328-user",
+        "role": "user",
+        "content": "hi",
+        "createdAt": "2026-05-22T14:49:24.328Z"
+      },
+      {
+        "id": "msg-1779461366299-ai",
+        "role": "assistant",
+        "content": "Hello again, Tushar! 😊 \n\nReady to get started? Let me know what you'd like to work on, or just ask me a question!",
+        "createdAt": "2026-05-22T14:49:26.299Z"
+      }
+    ]
+  },
+  {
+    "id": "chat-1779439255355",
+    "title": "Start of the Conversation",
+    "createdAt": "2026-05-22T08:40:55.355Z",
+    "updatedAt": "2026-05-22T08:41:09.170Z",
+    "messages": [
+      {
+        "id": "msg-1779439255355-user",
+        "role": "user",
+        "content": "hi",
+        "createdAt": "2026-05-22T08:40:55.355Z"
+      },
+      {
+        "id": "msg-1779439260349-ai",
+        "role": "assistant",
+        "content": "Hello! How can I help you today? \n\nFeel free to ask a question, share a project you're working on, or let me know what you need assistance with. I'm here to help!",
+        "createdAt": "2026-05-22T08:41:00.349Z"
+      },
+      {
+        "id": "msg-1779439265133-user",
+        "role": "user",
+        "content": "who are you",
+        "createdAt": "2026-05-22T08:41:05.133Z"
+      },
+      {
+        "id": "msg-1779439269170-ai",
+        "role": "assistant",
+        "content": "I am **Claude**, a friendly, helpful, and accurate AI assistant. \n\nI am designed to collaborate with you on a wide variety of tasks. Here are a few things I can help you with:\n\n*   **Writing & Editing:** Crafting emails, essays, code, or creative stories.\n*   **Analysis & Problem Solving:** Explaining complex concepts, debugging code, or analyzing data.\n*   **Brainstorming:** Generating fresh ideas for projects, planning trips, or finding creative solutions.\n*   **Organization:** Summarizing long documents, formatting text, or structuring information.\n\nHow can I help you today?",
+        "createdAt": "2026-05-22T08:41:09.170Z"
+      }
+    ]
+  },
+  {
+    "id": "chat-1",
+    "title": "Interrupt-driven I/O fundamentals",
+    "createdAt": "2026-05-22T04:38:35.983Z",
+    "updatedAt": "2026-05-22T04:38:35.985Z",
+    "messages": [
+      {
+        "id": "msg-1-1",
+        "role": "user",
+        "content": "Explain modern interrupt-driven I/O and how it compares to programmed I/O.",
+        "createdAt": "2026-05-22T04:33:35.985Z"
+      },
+      {
+        "id": "msg-1-2",
+        "role": "assistant",
+        "content": "### Interrupt-Driven I/O vs. Programmed I/O\n\nIn modern computers, efficiency is key. Here is a breakdown of how **Interrupt-Driven I/O** improves upon legacy **Programmed I/O**:\n\n1. **Programmed I/O (Polling)**:\n   - The CPU repeatedly checks the status of an I/O device to see if it is ready to transfer data.\n   - *Drawback*: Busy-waiting. The CPU is completely consumed by testing flags and can do no other calculation.\n\n2. **Interrupt-Driven I/O**:\n   - The CPU issues an I/O command and continues executing normal processing tasks.\n   - When the device is ready (e.g., keyboard key pressed, data disk block loaded), the device controller raises an **Interrupt** line on the system bus.\n   - The CPU interrupts its current execution cycle, saves state, jumps to the **Interrupt Service Routine (ISR)**, transfers the data, restores state, and resumes normal operations.\n   - *Advantage*: High CPU efficiency, perfect for multitasking.",
+        "createdAt": "2026-05-22T04:38:35.985Z"
+      }
+    ]
+  },
+  {
+    "id": "chat-2",
+    "title": "Winding down from work for better sleep",
+    "createdAt": "2026-05-21T20:38:35.985Z",
+    "updatedAt": "2026-05-21T20:38:35.985Z",
+    "messages": [
+      {
+        "id": "msg-2-1",
+        "role": "user",
+        "content": "I have a hard time sleeping after late work shifts. Suggest a wind-down routine.",
+        "createdAt": "2026-05-21T20:35:15.985Z"
+      },
+      {
+        "id": "msg-2-2",
+        "role": "assistant",
+        "content": "Structuring your transition from high-cognitive load work to sleep is vital. Here are three effective techniques:\n\n* **The Dimming Protocol**: Dim your screens to lowest settings and switch to orange ambient lightning 1 hour before bed to signal melatonin production.\n* **Cognitive Offloading**: Spend 5 minutes writing down your outstanding tasks for tomorrow. This gets them out of your working memory and reduces bedtime rumination.\n* **Physiological Sigh**: Take two deep inhales through your nose followed by a slow, fully exhaled breath through your mouth. This lowers heart rate and activates the parasympathetic nervous system.",
+        "createdAt": "2026-05-21T20:38:35.985Z"
+      }
+    ]
+  },
+  {
+    "id": "chat-3",
+    "title": "Greeting and introductions",
+    "createdAt": "2026-05-21T08:38:35.985Z",
+    "updatedAt": "2026-05-21T08:38:35.985Z",
+    "messages": [
+      {
+        "id": "msg-3-1",
+        "role": "user",
+        "content": "Hi Claude, pleased to meet you! Tell me who you are.",
+        "createdAt": "2026-05-21T08:36:55.985Z"
+      },
+      {
+        "id": "msg-3-2",
+        "role": "assistant",
+        "content": "Hello! I am Claude, a large language model trained by Anthropic. I'm designed to be a helpful, harmless, and honest assistant. I can help you with writing, coding, analysis, brainstorming, and learning anything new. How is your day going?",
+        "createdAt": "2026-05-21T08:38:35.985Z"
+      }
+    ]
+  },
+  {
+    "id": "chat-4",
+    "title": "Test and set method in concurrent programming",
+    "createdAt": "2026-05-20T20:38:35.985Z",
+    "updatedAt": "2026-05-20T20:38:35.985Z",
+    "messages": [
+      {
+        "id": "msg-4-1",
+        "role": "user",
+        "content": "What is the 'test-and-set' instruction?",
+        "createdAt": "2026-05-20T20:37:35.985Z"
+      },
+      {
+        "id": "msg-4-2",
+        "role": "assistant",
+        "content": "The `test-and-set` is an **atomic hardware instruction** used to write to a memory location and return its old value as a single, indivisible operation.\n\n```c\nboolean test_and_set(boolean *target) {\n    boolean rv = *target;\n    *target = TRUE;\n    return rv;\n}\n```\n\nIf multiple threads try to execute it simultaneously, the hardware guarantees only one executes it at a time. It's the building block of spinlocks and mutexes to solve critical section problems.",
+        "createdAt": "2026-05-20T20:38:35.985Z"
+      }
+    ]
+  },
+  {
+    "id": "chat-5",
+    "title": "Cracking GATE exam without coaching",
+    "createdAt": "2026-05-20T08:38:35.985Z",
+    "updatedAt": "2026-05-20T08:38:35.985Z",
+    "messages": [
+      {
+        "id": "msg-5-1",
+        "role": "user",
+        "content": "Is it possible to crack the Graduate Aptitude Test in Engineering (GATE) with self-study?",
+        "createdAt": "2026-05-20T08:37:35.985Z"
+      },
+      {
+        "id": "msg-5-2",
+        "role": "assistant",
+        "content": "Absolutely. Many top rankers in GATE (including double-digit ranks) crack the exam entirely through disciplined self-study. \n\nKey strategies for self-study success:\n- **Master standard text reference books** instead of generic coaching notes.\n- **Understand high-weightage topics**: Linear Algebra, Calculus, Operating Systems, Computer Architecture, Data Structures & Algorithms.\n- **Solve previous 15+ years of question papers** multiple times. GATE questions often repeat logic, parameters, and style.\n- **Give regular mock tests** starting 3 months before the exam to work on accuracy and speed under exam conditions.",
+        "createdAt": "2026-05-20T08:38:35.985Z"
+      }
+    ]
+  },
+  {
+    "id": "chat-6",
+    "title": "Pipeline bubble insertion with diagrams",
+    "createdAt": "2026-05-19T20:38:35.985Z",
+    "updatedAt": "2026-05-19T20:38:35.985Z",
+    "messages": [
+      {
+        "id": "msg-6-1",
+        "role": "user",
+        "content": "Describe pipeline stalls or pipeline bubbles in computer architecture.",
+        "createdAt": "2026-05-19T20:37:35.985Z"
+      },
+      {
+        "id": "msg-6-2",
+        "role": "assistant",
+        "content": "A **Pipeline Stall** (or **Bubble**) is a delay inserted into an instruction pipeline to resolve hazards (like data dependencies or contentions) before subsequent instructions proceed.\n\n### Bubble Timing Diagram\n\n```text\nClock Cycle:   1    2    3    4    5    6    7\n-------------------------------------------------\nInstr 1:      IF   ID   EX   MEM  WB\nInstr 2:           IF   ID   [STALL]  EX   MEM  WB\nInstr 3:                IF   [STALL]  ID   EX   MEM\n```\n\nDuring physical stall cycles, the control hardware disables write-enables of stage registers and forces zero-operation control lines (NOPs) to the Execution stage, forming the literal 'bubble' that drifts downstream.",
+        "createdAt": "2026-05-19T20:38:35.985Z"
+      }
+    ]
+  },
+  {
+    "id": "chat-7",
+    "title": "OSI layer PDU encapsulation explained",
+    "createdAt": "2026-05-19T08:38:35.985Z",
+    "updatedAt": "2026-05-19T08:38:35.985Z",
+    "messages": [
+      {
+        "id": "msg-7-1",
+        "role": "user",
+        "content": "What are the protocol data units (PDU) at the various layers of the OSI model?",
+        "createdAt": "2026-05-19T08:37:35.985Z"
+      },
+      {
+        "id": "msg-7-2",
+        "role": "assistant",
+        "content": "As data travels down the OSI stack, headers and footers are encapsulated, modifying the **Protocol Data Unit (PDU)** at each level:\n\n* **Application / Presentation / Session (Layers 5-7)**: *Data*\n* **Transport (Layer 4)**: *Segment* (TCP) or *Datagram* (UDP)\n* **Network (Layer 3)**: *Packet*\n* **Data Link (Layer 2)**: *Frame*\n* **Physical (Layer 1)**: *Bits*",
+        "createdAt": "2026-05-19T08:38:35.985Z"
+      }
+    ]
+  },
+  {
+    "id": "chat-8",
+    "title": "AI artifact creation capabilities",
+    "createdAt": "2026-05-18T20:38:35.985Z",
+    "updatedAt": "2026-05-18T20:38:35.985Z",
+    "messages": [
+      {
+        "id": "msg-8-1",
+        "role": "user",
+        "content": "What are 'artifacts' in Claude?",
+        "createdAt": "2026-05-18T20:37:35.985Z"
+      },
+      {
+        "id": "msg-8-2",
+        "role": "assistant",
+        "content": "**Artifacts** are dedicated UI viewports that appear on the right side of the main chat container when Claude creates self-contained content that is meant to be edited, run, or referenced independently.\n\nExamples include:\n- Code blocks (React, HTML, Python)\n- Scalable Vector Graphics (SVG)\n- Detailed documentation summaries (markdown)\n- Diagrams (Mermaid.js)\n\nThis keeps your conversation thread clean while elevating complex deliverables into workspace views.",
+        "createdAt": "2026-05-18T20:38:35.985Z"
+      }
+    ]
+  }
+]

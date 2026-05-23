@@ -1,0 +1,6 @@
+{
+  "name": "Claude Database Chat",
+  "description": "Premium full-stack replica of Claude.ai featuring dynamic sidebar past chats retrieved from a dedicated file database, instant Gemini API responses, and strict server sync requirements.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
